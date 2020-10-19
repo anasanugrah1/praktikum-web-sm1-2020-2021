@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Dashboard Covid 19 Indonesia</title>
+    <meta name="description" content="Dashboard Covid 19 Indonesia. Data kasus per provinsi dan informasi lainnya terkait penanganan Covid 19">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Header dashboard -->
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="Image/cart.png" width="125px">
+                </div>
+                <nav>
+                    <ul id="Menuitems">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Data</a></li>
+                    <li><a href="#">Berita</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Kontak</a></li>
+                    <li><a href="#">Donasi</a></li>
+                    <li><a href="#">Bantuan Sosial</a></li>
+                    <button type="button" class="btn btn-success">Download Apps &#8594;</button>
+                    </ul>
+                </nav>
+                <div class="nav-image">
+                <img src="Image/menu.png" class="menu-icon" onclick="menutoggle()">
+                </div>
+              
+        
+            </div>
+            </div>
+    
+    <!-- Konten utama dashboard -->
+
+    <div class="konten">
+      <header>
+        <h1 class="shadow">Dashboard Statistik Kasus COVID-19 Indonesia</h1>
+        <small class="lion">Update Terakhir: Senin, 19 Okt 2020</small>
+      </header>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Total Konfirmasi</h5>
+                <p class="card-text">Jawa Barat</p>
+                <a href="#" class="btn btn-primary">30.778 Terkonfirmasi</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Isolasi/Dalam Perawatan</h5>
+                <p class="card-text">Jawa Barat</p>
+                <a href="#" class="btn btn-primary">9.590 Dalam Perawatan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Sembuh/Selesai Perawatan</h5>
+                <p class="card-text">Jawa Barat</p>
+                <a href="#" class="btn btn-primary">20.608 Sembuh</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Meninggal</h5>
+                <p class="card-text">Jawa Barat</p>
+                <a href="#" class="btn btn-primary">580 Meninggal</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Bagian footer dari dashboard -->
+    <footer id="footer">
+      <p>Tim Pengelola Dashboard COVID-19 Indonesia</p>
+      <div class="flex-container">
+        <div><a href="https://pikobar.jabarprov.go.id" target="_blank" ><img src="Image/cart.png"></a></div>
+        <div><a href=""><img src="Image/logo-relawan-covid.png"></a></div>
+        <div><a href=""><img src="Image/logo.png"></a></div>  
+      </div>
+    </footer> 
+    
+
+    <script>
+      var Menuitems = document.getElementById("Menuitems");
+
+      Menuitems.style.maxHeight = "0px"
+
+      function menutoggle(){
+        if(Menuitems.style.maxHeight =="0px")
+        {
+          Menuitems.style.maxHeight ="300px"
+        }
+        else{
+          Menuitems.style.maxHeight = "0px"
+        }
+         
+      }
+    </script>
+  </body>
+</html> 

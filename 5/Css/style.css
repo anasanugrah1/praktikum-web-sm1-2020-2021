@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+
+}
+nav ul li {
+    display: inline-block;
+    margin: 20px;
+}
+nav ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: #555;
+}
+.img{
+    margin-top: 30px;
+}
+.nav-image{
+    margin-left: 20px;
+}
+.container{
+    width: 100%;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.konten{
+    margin: 30px 150px 30px 150px;
+}
+header{
+    margin: 30px 0 30px 0;
+}
+header h1{
+    font-family: 'Poppins', sans-serif;
+}
+.card-body{
+    background-color: aliceblue;
+}
+footer{
+    text-align: center;
+
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: DodgerBlue;
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1 transparent ;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 30px;
+  }
+  .flex-container img{
+      width: 50px;
+      height: 50px;
+  }
+  .menu-icon{
+      width: 25px;
+      margin-left: 20px;
+      display: none;
+  }
+  @media only screen and (max-width:800px){
+
+      nav ul {
+          position: absolute;
+          top: 70px;
+          left: 0;
+          background: #333;
+          width: 100%;
+          overflow: hidden;
+          transform: max-height 0.5s;
+      }
+      nav ul li {
+          display: block;
+          margin-right: 50px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
+      nav ul li a{
+          color: #fff;
+
+      }
+      .menu-icon{
+          display: block;
+          cursor: pointer;
+
+      }
+  }
+
+  @media (max-width: 650px){
+      body{
+          background-color: rgb(153, 235, 1);
+      }
+  }
+  @media (max-width: 600px){
+      .shadow{
+        background-color: rgb(153, 235, 1);
+      }
+  }
+  @media (max-widht: 600px){
+      .konten{
+          background-color: rgb(240, 116,15, 0,815);
+      }
+  }
