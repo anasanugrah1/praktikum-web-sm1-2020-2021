@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Function</title>
+</head>
+<body>
+    <h1>Javascript Function</h1>
+    <script>
+
+        //Deklarasi Function
+        function getLuas(panjang, lebar) {
+        var luas = panjang * lebar;
+        return luas;
+        }
+        console.log(getLuas(4, 5));
+
+        //Deklarasi Function Sebagai Expression
+        var getLuas = function (panjang, lebar) {return panjang * lebar};
+        console.log(getLuas(8, 10));
+
+        //Hoisting Pada Function
+        console.log(getLuas(5, 20));
+        var getLuas = function (panjang, lebar) {return panjang * lebar};
+
+        //Memasukan Nilai Balikan Function ke Dalam Variable
+        var getLuas = function (panjang, lebar) {return panjang * lebar};
+        var luas = getLuas(7, 8);
+        console.log(luas);
+
+        //Function Sebagai Parameter Function Lainnya
+        var getLuas = function (panjang, lebar) {return panjang * lebar};
+        function printGetLuas(f) {
+        luas = f(4, 5);
+        console.log(luas);
+        }
+        printGetLuas(getLuas);
+
+        //Arrow Function
+        const getLuass = (panjang, lebar) => panjang * lebar;
+        console.log(getLuass(11,19))
+
+        //Argumen Fungsi
+        printPeserta("Firly", "Renaldi", "Mahmud", "Iqbal");
+        function printPeserta() {
+        console.log(arguments);
+        }
+
+        //Nama
+        function getName(Depan, Belakang){
+            return Depan + " " + Belakang
+        }
+        console.log(getName('Abdur', 'Rahman'));
+
+        //Cerita Kemarin
+        function ceritaKemarin(hari, nama, aksi, tempat) {
+            return "Hari " + hari + " seorang pemuda yang tampan bernama " + nama + " sedang " + aksi + " di " + tempat
+        }
+        console.log(ceritaKemarin('Kamis', 'Rahman', 'Makan', 'Ruang Makan'));
+
+        console.log("Good Luck!")
+    </script>
+</body>
+</html> 
