@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Latihan Javascript 1</title>
+  </head>
+  <body>
+    <script>
+
+        // Beri komentar maksud script di bawah ini ...
+      function prosesPerhitungan() {
+        // adalah suatu bagian dari program yang dipergunakan untuk mengerjakan hasil perhitungan dengan cepat
+
+        // Beri komentar maksud script di bawah ini ...
+        console.log("Fungsi prosesPerhitungan() dipanggil");
+        // adalah fungsi untuk menampilkan teks ke console yang berisi pesan setiap ada error
+
+        // Beri komentar maksud script di bawah ini ...
+        var j = document.getElementById("input-j").value;
+        // untuk mengambil sebuah value inputan data dari jumlah total ranjang dirumah sakit
+
+        // Beri komentar maksud script di bawah ini ...
+        var t = document.getElementById("input-t").value;
+        // untuk mengambil sebuah value inputan data dari jumlah total ranjang yang terisi
+
+        // Buat formula untuk menghitung persentase keterisian ranjang (ptj) ! 
+        // Persentase keterisian ranjang = ranjang yang terisi dibagi dengan total ranjang
+
+        // Persentase keterisian dihitung dari Jumlah total ranjang di rumah sakit yang terisi dibagi dengan jumlah ranjang total dirumah sakit hasilnya dikalikan dengan 100
+        var ptj = t / j * 100; 
+
+        // Beri komentar maksud script di bawah ini ...
+        document.getElementById("output-ptj").textContent = ptj + " %";
+        // untuk mengambil sebuah value inputan data yang akan disimpan presentase keterisian dari Jumlah total ranjang di rumah sakit yang terisi dengan bagi Jumlah total ranjang di rumah sakit dikali 100 dan hasilnya diubah kedalam persentase persen
+
+        /*
+          Buat formula untuk menampilkan kondisi keterisian ranjang (k)
+          Jika dibawah 30%, kondisi = AMAN
+          Jika 30% - 70%, kondisi = WASPADA
+          Jika diatas 70%, kondisi = DARURAT
+        */
+
+        // Hasil kondisi didapatkan melalui hasil ptj
+        var k = "";
+                if (ptj <= 30) {
+                    k = "AMAN"
+                } else if (ptj <= 70) {
+                    k = "WASPADA"
+                } else if (ptj > 70) {
+                    k = "DARURAT"
+                }
+
+        // Beri komentar maksud script di bawah ini ...
+        document.getElementById("output-k").textContent = k;
+        // menampilkan hasil kondisi dimana datanya diambil melalui ptj dengan syarat nilai-nilai yang sudah ditentukan
+
+      }
+
+
+    </script>
+    <h1>Menghitung Presentase Keterisian Ranjang di Rumah Sakit Ketika Covid-19</h1>
+    <form>
+      <table>
+        <tr>
+          <td>Jumlah total ranjang di rumah sakit</td>
+          <td><input id="input-j"></td>
+        </tr>
+        <tr>
+          <td>Jumlah total ranjang di rumah sakit yang terisi</td>
+          <td><input id="input-t"></td>
+        </tr>
+        <tr>
+          <td colspan="2"><input type="button" id="input-button" value="Kalkulasi Keterisian Ranjang di Rumah Sakit" onclick="prosesPerhitungan()"></td>
+        </tr>
+        <tr>
+          <td>Persentase keterisian</td>
+          <td><p id="output-ptj"></p></td>
+        </tr>
+        <tr>
+          <td>Kondisi</td>
+          <td><p id="output-k"></p></td>
+        </tr>
+      </table> 
+    </form>
+  </body>
+</html>
